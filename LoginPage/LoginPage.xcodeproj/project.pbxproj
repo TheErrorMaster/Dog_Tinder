@@ -12,6 +12,7 @@
 		069DFA8F26044BD4003F0E78 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069DFA8E26044BD4003F0E78 /* WebService.swift */; };
 		069DFA9126044BFF003F0E78 /* TimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069DFA9026044BFF003F0E78 /* TimelineView.swift */; };
 		069DFA9326044C91003F0E78 /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069DFA9226044C91003F0E78 /* UserView.swift */; };
+		06A66761261026C500776F8F /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A66760261026C500776F8F /* MessageService.swift */; };
 		06AE9D732602BA3400BF7983 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AE9D722602BA3400BF7983 /* AppDelegate.swift */; };
 		06AE9D752602BA3400BF7983 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06AE9D742602BA3400BF7983 /* SceneDelegate.swift */; };
 		06AE9D782602BA3400BF7983 /* LoginPage.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 06AE9D762602BA3400BF7983 /* LoginPage.xcdatamodeld */; };
@@ -29,6 +30,7 @@
 		069DFA8E26044BD4003F0E78 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		069DFA9026044BFF003F0E78 /* TimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimelineView.swift; sourceTree = "<group>"; };
 		069DFA9226044C91003F0E78 /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		06A66760261026C500776F8F /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		06AE9D6F2602BA3400BF7983 /* LoginPage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginPage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06AE9D722602BA3400BF7983 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06AE9D742602BA3400BF7983 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				069DFA8E26044BD4003F0E78 /* WebService.swift */,
 				069DFA9026044BFF003F0E78 /* TimelineView.swift */,
 				069DFA9226044C91003F0E78 /* UserView.swift */,
+				06A66760261026C500776F8F /* MessageService.swift */,
 			);
 			path = LoginPage;
 			sourceTree = "<group>";
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				069DFA9326044C91003F0E78 /* UserView.swift in Sources */,
+				06A66761261026C500776F8F /* MessageService.swift in Sources */,
 				069DFA8F26044BD4003F0E78 /* WebService.swift in Sources */,
 				069DFA8D26043DE9003F0E78 /* ProfileView.swift in Sources */,
 				06AE9D782602BA3400BF7983 /* LoginPage.xcdatamodeld in Sources */,

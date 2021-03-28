@@ -17,34 +17,26 @@ struct LoginView: View {
     var body: some View {
         NavigationView {
             ZStack{
-                LinearGradient(gradient: Gradient(colors: [Color.green, Color.white,]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
-            VStack{
-                Text("Doggy Mingle")
-                    .font(.system(size:40, weight: .medium, design: .default))
-                    .foregroundColor(.white)
-                    .padding(.bottom, 100)
-                Spacer()
-            }
-            VStack {
-                    Image(systemName: "heart.text.square.fill")
+                Color.secondary.edgesIgnoringSafeArea(.all)
+                VStack {
+                    Image(systemName: "message")
                         .font(.system(size: 156.0))
                         .padding(.bottom,100)
-                    Text("Username:")
+                    Text("Username")
                     TextField("Username...", text:$username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                         .foregroundColor(Color.blue).background(Color.green)
                         .autocapitalization(.none)
-                    Text("Password:")
+                    Text("Password")
                     TextField("Password...", text:$password).textFieldStyle(RoundedBorderTextFieldStyle())
                         .autocapitalization(.none)
+                    Text("your Username: \(username)")
                     NavigationLink(
                     destination: HomeView(username: username), isActive: $home){
                         Button(action: {
                             self.addForm(user:"\(self.username)", pass:"\(self.password)")
                         }) {
-                            Text("Login")
-                                .font(Font.system(size: 30))
+                            Text("Logged In")
                         }
                     }
     //                NavigationLink(destination: HomeView()) {
@@ -69,7 +61,7 @@ struct LoginView: View {
     func addForm(user:String, pass:String) {
         let url = URL(string: "http://localhost:5000/login")!
         var request = URLRequest(url: url)
-        let postString = "user=\(user)&num=\(pass)"
+        let postString = "username=\(user)&password=\(pass)"
         print(postString)
         request.httpMethod = "POST"
         request.httpBody = postString.data(using: String.Encoding.utf8)
