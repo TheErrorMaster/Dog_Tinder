@@ -13,8 +13,6 @@ struct LoginView: View {
     @State var password: String = ""
     @State var http: String = ""
     @State var home = false
-    
-    @State var hidde = false
         
     var body: some View {
         NavigationView {
@@ -23,41 +21,30 @@ struct LoginView: View {
                     .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
             VStack{
                 Text("Doggy Mingle")
-                    .font(.system(size:40,weight: .medium, design: .default))
+                    .font(.system(size:40, weight: .medium, design: .default))
                     .foregroundColor(.white)
-                    .padding(.top, 100)
+                    .padding(.bottom, 100)
                 Spacer()
-                
-                    Image("hot_dog")
-                        .resizable()
-                        .frame(width: 190, height: 190, alignment: .bottom)
-                        .padding(.top,10)
+            }
+            VStack {
+                    Image(systemName: "heart.text.square.fill")
+                        .font(.system(size: 156.0))
+                        .padding(.bottom,100)
                     Text("Username:")
                     TextField("Username...", text:$username)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .foregroundColor(Color.black).background(Color.green)
+                        .foregroundColor(Color.blue).background(Color.green)
                         .autocapitalization(.none)
                     Text("Password:")
-                if self.hidde {
-                    TextField("Password...", text: self.$password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding()
+                    TextField("Password...", text:$password).textFieldStyle(RoundedBorderTextFieldStyle())
                         .autocapitalization(.none)
-                } else {
-                    SecureField("Password...", text: self.$password)
-                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                        .padding()
-                        .autocapitalization(.none)
-                }
                     NavigationLink(
                     destination: HomeView(username: username), isActive: $home){
                         Button(action: {
                             self.addForm(user:"\(self.username)", pass:"\(self.password)")
                         }) {
                             Text("Login")
-                                .font(Font.system(size: 35))
-                                .foregroundColor(.orange)
-                                .padding(.top,20)
+                                .font(Font.system(size: 30))
                         }
                     }
     //                NavigationLink(destination: HomeView()) {
@@ -73,9 +60,8 @@ struct LoginView: View {
                     }
                     .padding()
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(Color.yellow)
+                    .background(Color.red)
                 }.frame(width: 340)
-            .padding(.bottom,70)
             }
         }
     }

@@ -12,15 +12,15 @@ struct ProfileView: View {
                 Text("My Profile")
                     .font(.system(size:40, weight: .medium, design: .default))
                     .foregroundColor(.white)
-                    .padding(.top, 50)
+                    .padding(.bottom, 200)
                 Spacer()
             }
-            VStack {
+        VStack {
             Image(uiImage: str.load())
                 .resizable()
                 .frame(width: 300, height: 250)
                 .clipShape(Circle())
-                .shadow(color: .gray, radius: 10)
+                .shadow(radius: 10)
                 .overlay(Circle().stroke(Color.white, lineWidth: 3))
             Text("\(username)")
                 .font(.system(size:35, weight: .medium, design: .default))
@@ -40,7 +40,7 @@ struct ProfileView: View {
                     .foregroundColor(Color.black)
                     .background(Color.white)
                     .clipShape(Circle())
-                    .shadow(color: .gray, radius: 10)
+                    
                 Button(action: {}) {
                     VStack{
                     Image(systemName: "video")
@@ -54,7 +54,6 @@ struct ProfileView: View {
                     .foregroundColor(Color.black)
                     .background(Color.white)
                     .clipShape(Circle())
-                    .shadow(color: .gray, radius: 10)
                     
             }
         }

@@ -10,15 +10,10 @@ import SwiftUI
 
 struct TimelineView: View {
     @ObservedObject var post = WebService()
+    
     var body: some View{
-            NavigationView {
-                ZStack{
-                    LinearGradient(gradient: Gradient(colors: [Color.green, Color.white,]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
+        NavigationView {
             List(post.posts) { post in
-                ZStack{
-                    LinearGradient(gradient: Gradient(colors: [Color.green, Color.white,]), startPoint: .topLeading, endPoint: .bottomTrailing)
-                        .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 VStack {
                     Text(String(post.id))
                         .frame(maxWidth: .infinity, alignment: .center)
@@ -33,18 +28,12 @@ struct TimelineView: View {
                         }
                         Text("\(post.id), \n\(post.title)").foregroundColor(Color.white).padding(20).shadow(radius: 5)
                     }
-                    Text("About \(post.title): ")
-                        .font(.system(size: 20))
-                        .foregroundColor(Color.black)
-                       
-                    Text("Tap to message")
-                        .font(.system(size:20))
-                        .foregroundColor(Color.orange)
-                        .padding(.top,10)
+                    Text("Bio: \(post.title)")
+                        .font(.system(size: 30))
+                        .foregroundColor(Color.gray)
+                        .padding(.bottom,300)
                 }
             }
-            }
-                }
             .navigationBarTitle("")
             .navigationBarHidden(true)
         .navigationBarBackButtonHidden(true)
