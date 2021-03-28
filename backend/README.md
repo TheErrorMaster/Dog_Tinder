@@ -1,7 +1,10 @@
 
 ## Steps
+0. instal virtualenv
+`pip3 install virtualenv`
+
 1. Create virtual enviroment 
-`virtual env`
+`virtualenv env`
 
 2. Activate virutal enviroment
 `source env/bin/activate`
