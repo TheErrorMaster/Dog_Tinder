@@ -7,11 +7,18 @@ struct CreateAccountView: View {
     
     var body: some View {
             ZStack{
-                Color.secondary.edgesIgnoringSafeArea(.all)
+                LinearGradient(gradient: Gradient(colors: [Color.green, Color.white,]), startPoint: .topLeading, endPoint: .bottomTrailing)
+                    .edgesIgnoringSafeArea(/*@START_MENU_TOKEN@*/.all/*@END_MENU_TOKEN@*/)
                 VStack {
-                    Image(systemName: "message")
-                        .font(.system(size: 156.0))
-                        .padding(.bottom,100)
+                    Text("Create an Account")
+                        .font(.system(size:40,weight: .medium, design: .default))
+                        .foregroundColor(.white)
+                        .padding(.top, 100)
+                    Spacer()
+                    Image("hot_dog")
+                        .resizable()
+                        .frame(width: 190, height: 190, alignment: .bottom)
+                        .padding(.top,10)
                     Text("Username")
                     TextField("Username...", text:$username).textFieldStyle(RoundedBorderTextFieldStyle()).foregroundColor(Color.blue).background(Color.green)
                     Text("Password")
@@ -32,7 +39,7 @@ struct CreateAccountView: View {
                     }
                     .padding()
                     .frame(minWidth: 0, maxWidth: .infinity)
-                    .background(Color.red)
+                    .background(Color.yellow)
                 }.frame(width: 340)
             }
         .navigationBarTitle("")
