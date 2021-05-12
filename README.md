@@ -7,4 +7,4 @@
 ![](image2.png)
 
 ## Message Screen
-![](image4.png)
+![](image3.png)
